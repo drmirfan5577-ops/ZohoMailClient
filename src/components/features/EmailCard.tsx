@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { Paperclip, Circle } from "lucide-react";
-import type { ZohoEmail } from "@/types/email";
+import type { EmailItem } from "@/types/email";
 import { cn } from "@/lib/utils";
 
 interface EmailCardProps {
-  email: ZohoEmail;
+  email: EmailItem;
   accountId: string;
 }
 
@@ -102,7 +102,7 @@ export default function EmailCard({ email, accountId }: EmailCardProps) {
               isUnread ? "font-medium text-slate-700" : "text-slate-500"
             )}
           >
-            {email.subject || "(No Subject)"}
+            {email.subject || "(موضوع نہیں ہے)"}
           </p>
 
           <div className="flex items-center gap-2 mt-1">
