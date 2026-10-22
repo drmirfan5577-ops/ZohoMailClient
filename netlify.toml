@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Single-page app: serve index.html for client-side routes (/inbox, /auth/callback, ...)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
